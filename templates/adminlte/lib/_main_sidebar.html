@@ -1,0 +1,19 @@
+{% extends 'adminlte/lib/_main_sidebar.html' %}
+{% block logo_text %}<b>Stock</b>Information{% endblock %}
+{% block nav_links %}
+<li>
+<a href="/">
+<i class="fa fa-dashboard"></i> <span>Home</span>
+</a>
+</li>
+<li>
+<a href="/admin/auth/user/">
+<i class="fa fa-user"></i> <span>Users</span>
+</a>
+</li>
+ <li>
+<a href="/admin/stock/stock/">
+<i class="fa fa-bar-chart"></i> <span>Stocks</span>
+</a>
+</li>
+{% endblock nav_links %}

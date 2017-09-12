@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}首页{% endblock %}
+
+{% block content %}
+    <a class="btn btn-app" id="button">
+        <i class="fa fa-play"></i> 运行
+    </a>
+   <div id="p" class="easyui-progressbar" style="width: 400px;"></div>
+    {% block javascript %}
+{{ block.super }}
+<script>
+    $(document).ready(function(){
+        $("#p").show()
+        $("#button").click(function () {
+            $.get("/stock/updatestock", function (data, status) {
+                alert("Data: " + data + "nStatus: " + status);
+            });
+        });
+    });
+    </script>
+    {% endblock %}
+{% endblock %}
